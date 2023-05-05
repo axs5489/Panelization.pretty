@@ -3,22 +3,22 @@ Panelization.pretty
 ===================
 
 LAYOUT FILES: KiCad footprints useful for PCB panelization (mouse-bites...).
+This was oringinally forked from madworm/Panelization.pretty. The following changes were made in each footprint for process efficiency.
+1. The half-circles (originally on F.Silkscreen) are now on the Edge Cuts layer, since the silkscreen is unnecessary and the half-circles were tedious to add.
+2. Footprints are excluded from schematic and BOM, as well as exempted from the Courtyard requirement
 
 ## How to add the footprints:
 
-1. Download/clone this repo.
-2. open Footprint editor in KiCad, there "File / Import footprint from KiCad File..."
-3. Select one of the mouse-bite kicad_mod files
-4. Save it to your project or make a local library
-
-Or place the full Panelization.pretty folder in your KiCad library folder.
+1. Download/clone this repo into your user footprints library.
+2. In KiCad, open Preferences -> "Manage Footprint Libraries ..."
+3. Add an empty row to the Global Libraries
+4. Name it ("Panelization") and point it to your clone
 
 ## How to use the footprints:
 
 1. Place the footprint on your pcb edge
 2. Connect the Edge.Cuts layer to the footprint
-3. draw the half circles on the Edge.Cuts layer
-4. enjoy
+9. Profit?!?!
 
 ## Examples:
 
@@ -40,5 +40,3 @@ then place mouse bite footprint and modify the Edge.Cuts layer on the first pcb.
 
 A Video showing different ways to make panels in KiCad:
 [![Watch the video](https://user-images.githubusercontent.com/1591573/142769347-8eac12c2-11e9-4f84-a7fc-1b08710edaf1.png)](https://youtu.be/_Syjz8m-2fw)
-
-
